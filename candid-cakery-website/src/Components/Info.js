@@ -12,6 +12,7 @@ const StyledInfoContainer = styled.div`
 `;
 const StyledInfoHeading = styled.h2`
     font-family: ${props => props.theme.fonts.fancy};
+    font-size: ${props => props.theme.fontSize.large};
     color: ${props => props.theme.colors.lilac};
     
     
@@ -20,8 +21,10 @@ const StyledInfoHeading = styled.h2`
 const StyledInfoParagraph = styled.p`
     color: ${props => props.theme.colors.lilac};
     font-family: ${props => props.theme.fonts.sansSerif};
+    font-size: ${props => props.theme.fontSize.small};
     font-weight: 700;
     letter-spacing: 0.1rem;
+    margin: 0.5rem;
 
 `;
 

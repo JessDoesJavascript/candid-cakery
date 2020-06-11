@@ -1,69 +1,87 @@
 import React from 'react';
 import styled from 'styled-components';
+import { device } from './device';
 
-const NavContainer = styled.div`
 
-`;
 const StyledNav = styled.nav`
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 50px;
-    text-align: center; 
-    background: ${props => props.theme.colors.palePink};
-    
+    @media ${device.mobileS} {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background: ${props => props.theme.colors.lilac};
+        list-style-type: none;
+       
+    }
 `;
 
 const StyledUl = styled.ul`
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex; 
-    justify-content: space-around;
+    @media ${device.mobileS} {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0px;
+        padding: 0px;
+   
+    }
 `;
 
 const StyledLi = styled.li`
-    display: inline;
-    padding: 0.1rem; 
-    width: 15%;
-    font-family: ${props => props.theme.fonts.sansSerif};
-    font-size: ${props => props.theme.fontSize.small};
-    color: white; 
-    background: ${props => props.theme.colors.lilac};
-    border-bottom: 3px solid white;
-    border-top: 3px solid white;
-    border-radius: 10px; 
-    margin: 0.3rem;
-    font-weight: 600;
-    letter-spacing: 0.5rem;
-    :hover {
-        cursor: pointer; 
+    @media ${device.mobileS} {
+        font-family: ${props => props.theme.fonts.sansSerif};
+        font-size: ${props => props.theme.fontSize.small};
+        color: white; 
+        background: ${props => props.theme.colors.lilac};
+        font-weight: 600;
+        letter-spacing: 0.1rem; 
+        padding: 0.1rem;
+        margin: 0.1rem;
+        border-radius: 0%; 
+        flex-grow: 1;
+        text-align: center;
+         
+       
+        
+        a:link {
+            text-decoration: none;
+            color: white;
+            }
+
+        a:visited {
+            text-decoration: none;
+            color:  ${props => props.theme.colors.darkPurple};
+        };
+        };
+            }
+        a:active {
+            background-color: ${props => props.theme.colors.palePink};
+            color: ${props => props.theme.colors.darkPurple};
+        }
+        
+        :hover {
+            cursor: pointer; 
+            background-color: ${props => props.theme.colors.palePink};
+            color: ${props => props.theme.colors.darkPurple};
+        }
+        }
     }
-    
-    
- 
- 
-   
 `;
 
-
-
-function NavBar() {
+function NavBar(props) {
           return(
-            <NavContainer>
+           
                 <StyledNav>
-                    <StyledUl>
-                    <StyledLi>Home</StyledLi>
-                    <StyledLi>About</StyledLi>
-                    <StyledLi>Info</StyledLi>
-                    <StyledLi>Gallery</StyledLi>
-                    <StyledLi>Contact</StyledLi>
+                  <StyledUl>
+                    <StyledLi onClick={props.click}>X CLOSE MENU</StyledLi>
+                    <StyledLi><a href="#home">HOME</a></StyledLi>
+                    <StyledLi><a href="#about">ABOUT</a></StyledLi>
+                    <StyledLi><a href="#gallery">PHOTO</a></StyledLi>
+                    <StyledLi><a href="#contact">CONTACT</a></StyledLi>
+                    <StyledLi><a href="#info">INFO</a></StyledLi>
+                      
                     </StyledUl>
                 </StyledNav>
-            </NavContainer>
-
+           
         )
     }
-
-
 export default NavBar;

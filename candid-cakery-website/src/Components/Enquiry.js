@@ -2,47 +2,49 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledFormContainer = styled.div`
-    margin: 10vw;
+    margin: 5%;
     display: flex;
     flex-direction: column;
     align-items: center; 
-    
+    padding: 5%;
 `;
 
 const StyledForm = styled.form`
     font-family: ${props => props.theme.fonts.sansSerif};
+    font-size: ${props => props.theme.fontSize.small};
     color: ${props => props.theme.colors.lilac};
     display: flex;
     flex-direction: column;
+    align-items: left;
 `;
 
 const StyledFormHeading = styled.h2`
     font-family: ${props => props.theme.fonts.fancy};
-    font-size: 3rem;
+    font-size: ${props => props.theme.fontSize.large};
     color: ${props => props.theme.colors.lilac};
+    margin: 0;
+    margin-bottom: 10px; 
 `;
 
 const StyledButton = styled.button`
     font-family: ${props => props.theme.fonts.sansSerif};
-    font-size: 1rem;
+    font-size: ${props => props.theme.fontSize.small};
     font-weight: 700;
     letter-spacing: 0.1rem;
     color: ${props => props.theme.colors.lilac};
     padding: 0.5rem;
-    margin: 0.5vw;
+    margin: 5%;
     border: 3px solid ${props => props.theme.colors.lilac};
     border-radius: 10px;
     background-color: ${props => props.theme.colors.palePink};
     :hover { 
         cursor: pointer;
     }
-    
 `;
 
 
 const StyledCheckboxContainer = styled.fieldset`
     border: 2px solid ${props => props.theme.colors.lilac};
-    
 `;
 
 const StyledLegend = styled.legend`
@@ -54,10 +56,10 @@ const StyledLabel = styled.label`
 `;
 
 const StyledNameandEmailInput = styled.input`
-    height: 2rem;
+    height: 1.2rem;
     font-family: ${props => props.theme.fonts.sansSerif};
     color: ${props => props.theme.colors.lilac};
-    font-size: 1rem;
+    font-size: ${props => props.theme.fontSize.small};
     font-weight: 700;
 `;
 
@@ -69,7 +71,7 @@ const StyledTextarea = styled.textarea`
     
     font-family: ${props => props.theme.fonts.sansSerif};
     color: ${props => props.theme.colors.lilac};
-    font-size: 1rem;
+    font-size: ${props => props.theme.fontSize.small};
     font-weight: 700;
     
 `;
@@ -81,6 +83,8 @@ function Enquiry() {
             <StyledForm> 
                 <StyledLabel for="Name">*Name:</StyledLabel>
                 <StyledNameandEmailInput type="text" id="Name" name="Name" placeholder="Please enter your name" required/>
+                <StyledLabel for="PhoneNumber">*Phone number:</StyledLabel>
+                <StyledNameandEmailInput type="text" id="PhoneNumber" name="PhoneNumber" placeholder="Please enter a contact number" required />
                 <StyledLabel for="Email">*Email:</StyledLabel>
                 <StyledNameandEmailInput type="email" id="Email" name="Email" placeholder="Your email address" required />
                 <StyledCheckboxContainer>
@@ -102,7 +106,7 @@ function Enquiry() {
                     <StyledLabel for="other">Other</StyledLabel>
                 </StyledCheckboxContainer>
                 <StyledLabel for="allergens">Any dietary requirements, allergens, special requests?</StyledLabel>
-                <StyledTextarea id="allergens" name="allergens" rows="5"/>
+                <StyledTextarea id="allergens" name="allergens" rows="3"/>
                 
 
                 <StyledLabel for="date">*What date is your order for?</StyledLabel>

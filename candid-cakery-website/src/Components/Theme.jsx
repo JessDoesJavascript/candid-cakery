@@ -8,16 +8,18 @@ const theme = {
         peach: '#eda5ae',
         pink: '#eeaddb',
         cream: '#feefd5',
-        palePink: '#fbe3f8'
+        palePink: '#fbe3f8',
+        darkPurple: '#362867'
     },
     fonts: {
+        chunkySansSerif: '"Open Sans Condensed", sans- serif',
         sansSerif: '"Open Sans Condensed", sans-serif',
         fancy: '"Dancing Script", cursive'
     },
     fontSize: {
-        small: '1em',
-        medium: '2em',
-        large: '3em'
+        small: '16px',
+        medium: '1.4em',
+        large: '1.8em'
     }
 };
 
