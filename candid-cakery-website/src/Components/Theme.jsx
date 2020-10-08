@@ -14,12 +14,12 @@ const theme = {
     fonts: {
         chunkySansSerif: '"Open Sans Condensed", sans- serif',
         sansSerif: '"Open Sans Condensed", sans-serif',
-        fancy: '"Dancing Script", cursive'
+        fancy: '"Inria Serif", serif'
     },
     fontSize: {
-        small: '16px',
-        medium: '1.4em',
-        large: '1.8em'
+        small: '1.2rem',
+        medium: '1.6rem',
+        large: '2.3rem'
     }
 };
 

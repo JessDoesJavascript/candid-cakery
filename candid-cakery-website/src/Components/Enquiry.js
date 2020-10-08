@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledFormContainer = styled.div`
-    margin: 5%;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center; 
-    padding: 5%;
+    padding: 1rem;
 `;
 
 const StyledForm = styled.form`
@@ -16,18 +16,20 @@ const StyledForm = styled.form`
     display: flex;
     flex-direction: column;
     align-items: left;
+    margin-bottom: 0.5rem;
+
 `;
 
 const StyledFormHeading = styled.h2`
     font-family: ${props => props.theme.fonts.fancy};
-    font-size: ${props => props.theme.fontSize.large};
+    font-size: ${props => props.theme.fontSize.medium};
     color: ${props => props.theme.colors.lilac};
     margin: 0;
     margin-bottom: 10px; 
 `;
 
 const StyledButton = styled.button`
-    font-family: ${props => props.theme.fonts.sansSerif};
+    font-family: ${props => props.theme.fonts.fancy};
     font-size: ${props => props.theme.fontSize.small};
     font-weight: 700;
     letter-spacing: 0.1rem;
@@ -45,26 +47,29 @@ const StyledButton = styled.button`
 
 const StyledCheckboxContainer = styled.fieldset`
     border: 2px solid ${props => props.theme.colors.lilac};
+    margin-bottom: 0.5rem;
 `;
 
 const StyledLegend = styled.legend`
-   
+   margin-bottom: 0.5rem;
 `;
 
 const StyledLabel = styled.label`
-    margin: 0.5vw;
+    margin-bottom: 0.5rem;
+ 
 `;
 
 const StyledNameandEmailInput = styled.input`
-    height: 1.2rem;
+    height: 1.5rem;
     font-family: ${props => props.theme.fonts.sansSerif};
     color: ${props => props.theme.colors.lilac};
     font-size: ${props => props.theme.fontSize.small};
     font-weight: 700;
+    margin-bottom: 0.5rem;
 `;
 
 const StyledCheckbox = styled.input`
-
+    margin-bottom: 0.5rem;
 `;
 
 const StyledTextarea = styled.textarea`
@@ -73,6 +78,7 @@ const StyledTextarea = styled.textarea`
     color: ${props => props.theme.colors.lilac};
     font-size: ${props => props.theme.fontSize.small};
     font-weight: 700;
+    margin-bottom: 0.5rem;
     
 `;
 
@@ -110,9 +116,9 @@ function Enquiry() {
                 
 
                 <StyledLabel for="date">*What date is your order for?</StyledLabel>
-                <input type="date" id="date" name="date" required />
+                <input type="date" id="date" name="date" required style={{ 'marginBottom': '0.5rem' }}/>
 
-             <StyledButton type="submit"> Send enquiry to Candid Cakery </StyledButton>
+             <StyledButton type="submit" onClick={() => alert("enquiry sent!")}> Send enquiry to Candid Cakery </StyledButton>
             </StyledForm>
      
         </StyledFormContainer>

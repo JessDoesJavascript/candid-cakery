@@ -25,12 +25,19 @@ const StyledApp = styled.div`
 `;
 
 const StyledBreaker = styled.div`
-  height: 10px;
+  @media ${device.mobileS} {
+    height: 50px }
+  @media ${device.mobileM} {
+    height: 70px }
+  
 `;
 
 const Container = styled.div`
   scroll-behavior: smooth;
   height: 100vh;
+  width: 100vw;
+  margin: auto;
+
 `;
 
 
@@ -42,7 +49,12 @@ class App extends React.Component {
 
   clickHandler = (e) => {
     e.preventDefault();
+    this.setState({
+      navBarShown: !this.state.navBarShown
+    })
+  }
 
+  toggleMenu = (e) => {
     this.setState({
       navBarShown: !this.state.navBarShown
     })
@@ -54,7 +66,7 @@ render() {
       <a id="home" href="home"> </a>
         <StyledApp>
           
-          {this.state.navBarShown === false && <MenuButton click={this.clickHandler}/> || <NavBar click={this.clickHandler}/>}
+          {this.state.navBarShown === false && <MenuButton click={this.clickHandler}/> || <NavBar click={this.toggleMenu}/>}
           <Header />
           <StyledBreaker><a id="about" href="about" /> </StyledBreaker> 
           <About />

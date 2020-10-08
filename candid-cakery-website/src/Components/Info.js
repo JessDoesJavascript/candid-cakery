@@ -8,12 +8,16 @@ const StyledInfoContainer = styled.div`
     margin: 5vw;
     padding: 1vw;
     box-shadow: 6px 6px 6px -6px grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
 `;
 const StyledInfoHeading = styled.h2`
     font-family: ${props => props.theme.fonts.fancy};
     font-size: ${props => props.theme.fontSize.large};
     color: ${props => props.theme.colors.lilac};
+    text-align: center;
     
     
 `;
@@ -25,6 +29,7 @@ const StyledInfoParagraph = styled.p`
     font-weight: 700;
     letter-spacing: 0.1rem;
     margin: 0.5rem;
+    text-align: justify; 
 
 `;
 

@@ -8,14 +8,10 @@ const StyledAboutContainer = styled.div`
         display: flex;
         flex-direction: column-reverse;
         align-items: center; 
-        margin: 0;
+        padding: 1rem;
         background: rgb(255,255,255);
         background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(251,227,248,1) 10%, rgba(251,227,248,1) 100%);
-        border-top: 10px solid ${props => props.theme.colors.pink};
-        
-        
-       
-        
+        border-top: 10px solid ${props => props.theme.colors.pink};     
     }
 `;
 
@@ -23,13 +19,14 @@ const StyledImageAndH2Container = styled.div`
     display: flex;
     flex-direction: row; 
     align-items: center;
+    justify-content: center; 
 `;
 
 const StyledAboutSection = styled.div`
     @media ${device.mobileS} {
         display: flex;
         flex-direction: column;
-        margin: 5%;
+        margin: 1rem;
         justify-content: center; 
     }
 `;
@@ -38,9 +35,11 @@ const StyledAboutH2 = styled.h2`
     @media ${device.mobileS} {
         font-family: ${props => props.theme.fonts.fancy};
         letter-spacing: 0.2rem; 
+        font-weight: 700;
         font-size: ${props => props.theme.fontSize.large};
         color: ${props => props.theme.colors.lilac};
         margin: 0;
+       padding: 0.5rem;
         text-align: center;
     }
 `;
@@ -62,6 +61,9 @@ const StyledImage = styled.img`
         width: 50%;
         border-radius: 100%;
         border: 4px solid ${props => props.theme.colors.pink};
+    }
+    @media ${device.mobileL} {
+
     }
 `;
 

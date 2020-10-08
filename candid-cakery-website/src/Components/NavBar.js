@@ -6,10 +6,13 @@ import { device } from './device';
 const StyledNav = styled.nav`
     @media ${device.mobileS} {
         position: fixed;
-        width: 100%;
+        width: 100vw;
         top: 0;
+        
         background: ${props => props.theme.colors.lilac};
         list-style-type: none;
+        display: flex;
+        justify-content: center;
        
     }
 `;
@@ -19,7 +22,7 @@ const StyledUl = styled.ul`
         list-style-type: none;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         margin: 0px;
         padding: 0px;
    
@@ -39,6 +42,7 @@ const StyledLi = styled.li`
         border-radius: 0%; 
         flex-grow: 1;
         text-align: center;
+        justify: center;
          
        
         
@@ -72,12 +76,12 @@ function NavBar(props) {
            
                 <StyledNav>
                   <StyledUl>
-                    <StyledLi onClick={props.click}>X CLOSE MENU</StyledLi>
-                    <StyledLi><a href="#home">HOME</a></StyledLi>
-                    <StyledLi><a href="#about">ABOUT</a></StyledLi>
-                    <StyledLi><a href="#gallery">PHOTO</a></StyledLi>
-                    <StyledLi><a href="#contact">CONTACT</a></StyledLi>
-                    <StyledLi><a href="#info">INFO</a></StyledLi>
+                      <StyledLi onClick={props.click}>X CLOSE MENU</StyledLi>
+                      <StyledLi onClick={props.click}><a href="#home">HOME</a></StyledLi>
+                      <StyledLi onClick={props.click}><a href="#about">ABOUT</a></StyledLi>
+                      <StyledLi onClick={props.click}><a href="#gallery">PHOTO</a></StyledLi>
+                      <StyledLi onClick={props.click}><a href="#contact">CONTACT</a></StyledLi>
+                      <StyledLi onClick={props.click}><a href="#info">INFO</a></StyledLi>
                       
                     </StyledUl>
                 </StyledNav>
