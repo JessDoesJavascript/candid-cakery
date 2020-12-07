@@ -35,9 +35,9 @@ const StyledBreaker = styled.div`
 const Container = styled.div`
   scroll-behavior: smooth;
   height: 100vh;
-  width: 100vw;
-  margin: auto;
-
+  padding-left: 25vw;
+  padding-right: 25vw;
+ 
 `;
 
 
@@ -62,12 +62,15 @@ class App extends React.Component {
 render() {
   return (
     <Theme>
+      {this.state.navBarShown === false && <MenuButton click={this.clickHandler} /> || <NavBar click={this.toggleMenu} />}
+      <Header />
       <Container>
       <a id="home" href="home"> </a>
         <StyledApp>
           
-          {this.state.navBarShown === false && <MenuButton click={this.clickHandler}/> || <NavBar click={this.toggleMenu}/>}
-          <Header />
+          
+         
+    
           <StyledBreaker><a id="about" href="about" /> </StyledBreaker> 
           <About />
           <StyledBreaker><a id="gallery" href="gallery" /> </StyledBreaker> 
@@ -77,6 +80,7 @@ render() {
           <StyledBreaker><a id="info" href="info" /> </StyledBreaker> 
           <Info />
           <StyledBreaker></StyledBreaker>
+        
           
             
           
